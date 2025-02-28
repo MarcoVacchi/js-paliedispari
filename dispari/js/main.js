@@ -20,16 +20,28 @@ console.log(sum);
 
 function isNumberEven(myNumber) {  //funzione per verificare se il numero inserito è dispari
 
-    let result = myNumber;
+    return myNumber % 2 === 0;
+    
+    /*let result = myNumber;
 
-    if (result % 2 === 0) {
+     if (result % 2 === 0) {
         return true;
     } else {
         return false;
-    }
+    }*/
+}
+console.log(isNumberEven(sum));
+
+let isSumEven = isNumberEven(sum);
+
+if ((checkEvenOdd === 'pari' && isSumEven) || (checkEvenOdd === 'dispari' && !isSumEven)) {
+    console.log('Il giocatore ha vinto!');
+} else {
+    console.log('Il computer ha vinto!');
 }
 
-console.log(isNumberEven(sum));
+//if (isNumberEven(sum))
+
 
 //const sum = isNumberOddOrEven(11);
 //console.log(sum);
