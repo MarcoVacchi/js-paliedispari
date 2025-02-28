@@ -1,32 +1,21 @@
 /*## Palidroma
 - Chiedere all’utente di inserire una parola
 - Creare una funzione per capire se la parola inserita è palindroma
-
-
-Ragionamento logico :
-- creo un prompt per chiedere all'utente di inserire una parola
-- 
-
-
-
 */
-let wordUser = prompt('Inserisci una parola!');
+let wordUser = prompt('Inserisci una parola!');  
 
-function checkIfPalindro(wordUser){
-    let word = wordUser
-    let wordReverse = word.split("").reverse().join;
-    
-    if  (word === wordReverse) {
-        console.log(`${word} è un parola palindroma!`);
-        return;
-    } else (word !== wordReverse); {
-        console.log(`${word} non è un parola palindroma!`)
-        return;
+function checkIfPalindro(wordUser){   
+    let word = wordUser.toLowerCase(); 
+    let wordReverse = word.split("");
+    let reversed = '' 
+    for (let i = word.length - 1; i >= 0; i--) {
+        reversed += wordReverse[i];
+    }
+    if  (word === reversed) {
+        return true;
+    } else {
+        return false;
     }
 }
-
-checkIfPalindro(wordUser);
-
-//if (checkIfPalindro()) {
-  //  console.log('è una parola palindra!');
-//}
+const checkFunction = checkIfPalindro(wordUser);
+console.log(checkFunction);
