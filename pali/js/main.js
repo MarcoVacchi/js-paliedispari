@@ -6,10 +6,9 @@ let wordUser = prompt('Inserisci una parola!');
 
 function checkIfPalindro(wordUser){   
     let word = wordUser.toLowerCase(); 
-    let wordReverse = word.split("");
     let reversed = '' 
     for (let i = word.length - 1; i >= 0; i--) {
-        reversed += wordReverse[i];
+        reversed = reversed + word[i];
     }
     if  (word === reversed) {
         return true;
